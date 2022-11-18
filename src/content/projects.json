@@ -1,4 +1,14 @@
 {
+  "recentTech": [
+    "JavaScript (ES6)",
+    "Node.js",
+    "React",
+    "Tailwind",
+    "Astro",
+    "Typescript",
+    "Prisma",
+    "Next.js"
+  ],
   "projects": [
     {
       "title": "Lorem Ipsum",

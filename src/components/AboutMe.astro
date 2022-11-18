@@ -1,17 +1,31 @@
 ---
 import picture from "../../public/assets/me.jpg";
+import { recentTech } from "../content/projects.json";
 ---
 
 <section class="flex flex-col w-full gap-20">
   <h1 class="font-section text-5xl">About Me</h1>
-  <div class="flex justify-between">
-    <p class="font-medium w-1/2">
-      I’m 18 y.o Ukrainian, currently in London, UK. Looking for my first job in
-      tech. Fast learner, passionate about making smooth, well-architectured web
-      apps, have experience making full-stack applications (react + node.js), to
-      discover more - see my projects. Apart from web-dev, I enjoy
-      weight-lifting and hiking or biking in nature.
-    </p>
+  <div class="flex gap-64">
+    <div class="flex flex-col gap-8 w-1/2">
+      <p class="font-medium text-lg">
+        I’m 18 y.o Ukrainian, currently in London, UK. Looking for my first job
+        in tech. Fast learner, passionate about making smooth,
+        well-architectured web apps, have experience making full-stack
+        applications (react + node.js), to discover more - see my projects.
+        Apart from web-dev, I enjoy weight-lifting and hiking or biking in
+        nature.
+      </p>
+      <div class="flex flex-col gap-6">
+        <p class="font-medium text-lg">
+          Here are a few technologies I’ve been working with recently:
+        </p>
+        <ul
+          class="list-inside list-disc max-w-fit flex-wrap h-20 flex flex-col gap-1 marker:text-secondary"
+        >
+          {recentTech.map((el) => <li class=" mr-8">{el}</li>)}
+        </ul>
+      </div>
+    </div>
 
     <img
       src={picture}
