@@ -1,0 +1,47 @@
+---
+import githubIcon from "../../public/assets/github.svg";
+import linkIcon from "../../public/assets/external-link.svg";
+export interface Props {
+  title: string;
+  text: string;
+  tags: string[];
+  img: string;
+  position: string;
+}
+const { title, text, tags, img, position } = Astro.props;
+---
+
+<div class="flex w-full items-center">
+  <div class={`${position === "left" ? "order-1" : "order-2 "} `}>
+    <img src={img} class="lg:max-w-lg max-w-md object-fit rounded-lg z-10" />
+  </div>
+
+  <div
+    class={`flex flex-col    gap-4  ${
+      position === "left"
+        ? "-ml-12 order-2 items-end"
+        : "-mr-12 order-1 items-start"
+    } `}
+  >
+    <div class={`${position === "left" ? "text-right " : "text-left"}`}>
+      <h4 class="font-sans text-secondary font-semibold">Featured Project</h4>
+      <h2 class="font-bold text-4xl">{title}</h2>
+    </div>
+    <div class="bg-primary-glass/70 py-6 px-10 z-20 rounded-xl drop-shadow-md">
+      <p
+        class={`font-medium ${
+          position === "left" ? "text-right " : "text-left"
+        }`}
+      >
+        {text}
+      </p>
+    </div>
+    <div class="flex gap-4 text-secondary font-semibold flex-wrap">
+      {tags.map((tag) => <p>{tag}</p>)}
+    </div>
+    <div class="flex gap-2">
+      <a href="#"><img src={githubIcon} class="hover:stroke-primary" /></a>
+      <a href="#"><img src={linkIcon} /></a>
+    </div>
+  </div>
+</div>

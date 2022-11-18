@@ -2,6 +2,7 @@
 import "@fontsource/quantico";
 import "@fontsource/inter";
 import "@fontsource/fjalla-one";
+import pattern from "../../public/assets/bgPattern.png";
 import NavBar from "../components/NavBar.astro";
 
 export interface Props {
@@ -20,9 +21,12 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-primary text-white">
+  <body class="bg-bgPattern text-white">
     <NavBar />
-    <slot />
+    <main class="px-20 py-14 flex flex-col items-center gap-44">
+      <slot />
+    </main>
+    <!-- <img src={pattern} class="absolute top-0 " /> -->
   </body>
 </html>
 <style is:global>

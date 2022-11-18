@@ -11,7 +11,7 @@ module.exports = {
       primary: {
         DEFAULT: "#9046CF",
         dark: "#893CCD",
-        glass: "rgb(127,50,195 / 71)",
+        glass: "rgb(127 50 195 / <alpha-value>)",
       },
       secondary: {
         DEFAULT: "#FFD148",
@@ -22,7 +22,15 @@ module.exports = {
       section: ["Fjalla One", "sans-serif", ...defaultTheme.fontFamily.sans],
       heading: ["Quantico", "sans-serif", ...defaultTheme.fontFamily.sans],
     },
-    extend: {},
+    extend: {
+      dropShadow: {
+        header: "0px 2px 15px rgba(0, 0, 0, 0.15)",
+        card: "0px 7px 20px 2px rgba(0, 0, 0, 0.11)",
+      },
+      backgroundImage: {
+        bgPattern: "url('/public/assets/bgPattern.png')",
+      },
+    },
   },
   plugins: [],
 };
