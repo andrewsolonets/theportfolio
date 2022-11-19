@@ -11,7 +11,18 @@ method="POST" -->
 <section class="flex flex-col w-full gap-20">
   <h1 class="font-section text-5xl">Contact</h1>
   <!-- <ContactForm client:visible/> -->
-  <form data-netlify="true" netlify-honeypot class="flex w-1/2 flex-col gap-8">
+  <form
+    netlify
+    netlify-honeypot
+    class="flex w-1/2 flex-col gap-8"
+    name="contact"
+  >
+    <input type="hidden" name="form-name" value="feedback" />
+    <p class="hidden">
+      <label>
+        Don’t fill this out if you’re human: <input name="bot-field" />
+      </label>
+    </p>
     <div class="relative w-full">
       <input
         type="text"
