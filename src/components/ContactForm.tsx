@@ -1,14 +1,14 @@
 export const ContactForm = () => {
   const submitHandler = (e: any) => {
     e.preventDefault();
-    console.log("form!");
+    console.log(e);
   };
   return (
     <form
       onSubmit={submitHandler}
       class="flex w-1/2 flex-col gap-8"
-      action="https://getform.io/f/d384645e-fbbd-4511-bc35-a8f6094793bd"
-      method="POST"
+      // action="https://getform.io/f/d384645e-fbbd-4511-bc35-a8f6094793bd"
+      // method="POST"
     >
       <div className="relative w-full">
         <input
@@ -16,6 +16,7 @@ export const ContactForm = () => {
           name="name"
           placeholder="Name"
           id="name"
+          required
           class="placeholder-transparent outline-none rounded-lg border-none w-full  focus:ring-0 peer bg-primary-glass/70"
         />
         <label
@@ -29,6 +30,7 @@ export const ContactForm = () => {
         <input
           type="email"
           name="email"
+          required
           placeholder="Email"
           id="email"
           class="placeholder-transparent outline-none rounded-lg border-none w-full  focus:ring-0 peer bg-primary-glass/70"
@@ -46,6 +48,7 @@ export const ContactForm = () => {
           id="message"
           placeholder="Message"
           rows={10}
+          required
           className="w-full bg-primary-glass/70 border-none outline-none rounded-lg focus:outline-none placeholder-transparent peer "
         />
         <label

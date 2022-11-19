@@ -11,6 +11,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/netlify": "^1.2.1",
     "@astrojs/preact": "^1.2.0",
     "@astrojs/tailwind": "^2.1.2",
     "@fontsource/fjalla-one": "^4.5.9",
