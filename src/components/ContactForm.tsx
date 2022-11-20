@@ -12,6 +12,7 @@ export const ContactForm = () => {
     };
 
     await notifyViaTelegramBot(values);
+    e.target.reset();
   };
 
   return (
