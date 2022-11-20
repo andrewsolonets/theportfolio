@@ -1,21 +1,45 @@
+import axios from "axios";
+import preact from "preact";
+import { useRef, useState } from "preact/hooks";
+
 export const ContactForm = () => {
-  const submitHandler = (e: any) => {
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
+  const botRef = useRef<HTMLInputElement>(null);
+
+  const submitCallback = async (e: any) => {
+    console.log(e.target);
     e.preventDefault();
-    console.log(e);
+    const values = {
+      botField: botRef.current?.value,
+      name: nameRef.current?.value,
+      email: emailRef.current?.value,
+      message: messageRef.current?.value,
+    };
+    console.log(values);
+    const result = await axios.post(
+      "/netlify/functions/contact-form-message",
+      values
+    );
+    console.log(result);
   };
+
   return (
     <form
-      onSubmit={submitHandler}
+      onSubmit={submitCallback}
       class="flex w-1/2 flex-col gap-8"
       // action="https://getform.io/f/d384645e-fbbd-4511-bc35-a8f6094793bd"
       // method="POST"
     >
+      <input aria-hidden="true" type="hidden" name="bot-field" ref={botRef} />
       <div className="relative w-full">
         <input
           type="text"
           name="name"
           placeholder="Name"
           id="name"
+          ref={nameRef}
           required
           class="placeholder-transparent outline-none rounded-lg border-none w-full  focus:ring-0 peer bg-primary-glass/70"
         />
@@ -30,13 +54,14 @@ export const ContactForm = () => {
         <input
           type="email"
           name="email"
+          ref={emailRef}
           required
           placeholder="Email"
           id="email"
           class="placeholder-transparent outline-none rounded-lg border-none w-full  focus:ring-0 peer bg-primary-glass/70"
         />
         <label
-          htmlFor="username"
+          htmlFor="email"
           className="absolute left-3 -top-5 text-sm  transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base  peer-focus:-top-5 peer-focus:text-sm "
         >
           Email
@@ -44,8 +69,9 @@ export const ContactForm = () => {
       </div>
       <div className="relative w-full">
         <textarea
-          name="message"
           id="message"
+          name="message"
+          ref={messageRef}
           placeholder="Message"
           rows={10}
           required
