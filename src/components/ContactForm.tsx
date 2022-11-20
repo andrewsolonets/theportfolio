@@ -1,28 +1,17 @@
-import axios from "axios";
-import preact from "preact";
-import { useRef, useState } from "preact/hooks";
+import { notifyViaTelegramBot } from "../helpers/helpers";
 
 export const ContactForm = () => {
-  const nameRef = useRef<HTMLInputElement>(null);
-  const emailRef = useRef<HTMLInputElement>(null);
-  const messageRef = useRef<HTMLTextAreaElement>(null);
-  const botRef = useRef<HTMLInputElement>(null);
-
   const submitCallback = async (e: any) => {
     console.log(e.target);
     e.preventDefault();
     const values = {
-      botField: botRef.current?.value,
-      name: nameRef.current?.value,
-      email: emailRef.current?.value,
-      message: messageRef.current?.value,
+      honeyBotFlaggedSpam: e.target.elements.botfield.value,
+      name: e.target.elements.name.value,
+      email: e.target.elements.email.value,
+      message: e.target.elements.message.value,
     };
-    console.log(values);
-    const result = await axios.post(
-      "/.netlify/functions/contact-form-message",
-      values
-    );
-    console.log(result);
+
+    await notifyViaTelegramBot(values);
   };
 
   return (
@@ -32,14 +21,13 @@ export const ContactForm = () => {
       // action="https://getform.io/f/d384645e-fbbd-4511-bc35-a8f6094793bd"
       // method="POST"
     >
-      <input aria-hidden="true" type="hidden" name="bot-field" ref={botRef} />
+      <input aria-hidden="true" type="hidden" name="botfield" />
       <div className="relative w-full">
         <input
           type="text"
           name="name"
           placeholder="Name"
           id="name"
-          ref={nameRef}
           required
           class="placeholder-transparent outline-none rounded-lg border-none w-full  focus:ring-0 peer bg-primary-glass/70"
         />
@@ -54,7 +42,6 @@ export const ContactForm = () => {
         <input
           type="email"
           name="email"
-          ref={emailRef}
           required
           placeholder="Email"
           id="email"
@@ -71,7 +58,6 @@ export const ContactForm = () => {
         <textarea
           id="message"
           name="message"
-          ref={messageRef}
           placeholder="Message"
           rows={10}
           required
