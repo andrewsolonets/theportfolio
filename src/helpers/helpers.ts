@@ -13,8 +13,8 @@ export async function notifyViaTelegramBot({
   email,
   message,
 }: IProps) {
-  const { PUBLIC_TELEGRAM_BOT_API_TOKEN, PUBLIC_TELEGRAM_BOT_CHAT_ID } =
-    import.meta.env;
+  const { VITE_TELEGRAM_BOT_API_TOKEN, VITE_TELEGRAM_BOT_CHAT_ID } = import.meta
+    .env;
 
   try {
     const data = JSON.stringify(
@@ -29,10 +29,10 @@ export async function notifyViaTelegramBot({
     );
     const text = `Contact form message: ${data}`;
     await axios({
-      url: `https://api.telegram.org/bot${PUBLIC_TELEGRAM_BOT_API_TOKEN}/sendMessage`,
+      url: `https://api.telegram.org/bot${VITE_TELEGRAM_BOT_API_TOKEN}/sendMessage`,
       method: "POST",
       data: {
-        chat_id: PUBLIC_TELEGRAM_BOT_CHAT_ID,
+        chat_id: VITE_TELEGRAM_BOT_CHAT_ID,
         text,
       },
     });
