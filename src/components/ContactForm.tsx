@@ -19,7 +19,7 @@ export const ContactForm = () => {
     };
     console.log(values);
     const result = await axios.post(
-      "/netlify/functions/contact-form-message",
+      "/.netlify/functions/contact-form-message",
       values
     );
     console.log(result);
