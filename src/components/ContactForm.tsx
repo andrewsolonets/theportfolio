@@ -18,7 +18,7 @@ export const ContactForm = () => {
   return (
     <form
       onSubmit={submitCallback}
-      class="flex w-1/2 flex-col gap-8"
+      class="flex md:w-1/2 w-full flex-col gap-8"
       // action="https://getform.io/f/d384645e-fbbd-4511-bc35-a8f6094793bd"
       // method="POST"
     >

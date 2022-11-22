@@ -3,11 +3,16 @@ import picture from "../../public/assets/me.jpg";
 import { recentTech } from "../content/projects.json";
 ---
 
-<section id="about" class="flex flex-col w-full gap-20">
-  <h1 class="font-section text-5xl">About Me</h1>
-  <div class="flex gap-64">
-    <div class="flex flex-col gap-8 w-1/2">
-      <p class="font-medium text-lg">
+<section
+  id="about"
+  class="flex flex-col w-full gap-20 md:items-start items-center text-center md:text-left"
+>
+  <h1 class="font-section text-4xl md:text-5xl">About Me</h1>
+  <div
+    class="flex md:gap-64 gap-20 md:flex-row flex-col md:items-start items-center"
+  >
+    <div class="flex flex-col gap-8 w-full md:w-1/2 md:order-1 order-2">
+      <p class="font-medium md:text-lg">
         I’m 18 y.o Ukrainian, currently in London, UK. Looking for my first job
         in tech. Fast learner, passionate about making smooth,
         well-architectured web apps, have experience making full-stack
@@ -16,20 +21,24 @@ import { recentTech } from "../content/projects.json";
         nature.
       </p>
       <div class="flex flex-col gap-6">
-        <p class="font-medium text-lg">
+        <p class="font-medium md:text-lg">
           Here are a few technologies I’ve been working with recently:
         </p>
         <ul
-          class="list-inside list-disc max-w-fit flex-wrap h-20 flex flex-col gap-1 marker:text-secondary"
+          class="list-inside list-disc md:max-w-fit flex-wrap md:h-20 h-32 flex flex-col gap-1 text-left marker:text-secondary"
         >
-          {recentTech.map((el) => <li class=" mr-8">{el}</li>)}
+          {
+            recentTech.map((el) => (
+              <li class="mr-2 md:mr-8 md:text-base text-sm">{el}</li>
+            ))
+          }
         </ul>
       </div>
     </div>
 
     <img
       src={picture}
-      class="drop-shadow-2xl object-cover w-52 h-52 rounded-full border-[14px] border-secondary"
+      class="drop-shadow-2xl object-cover w-52 h-52 rounded-full border-[14px] md:order-2 order-1 border-secondary"
     />
   </div>
 </section>

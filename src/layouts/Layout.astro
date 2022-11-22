@@ -22,7 +22,9 @@ const { title } = Astro.props;
   </head>
   <body class="bg-bgPattern text-white">
     <Nav client:load />
-    <main class="px-20 py-14 flex flex-col items-center gap-44">
+    <main
+      class="px-6 py-10 md:px-20 md:py-14 flex flex-col items-center gap-32 md:gap-44"
+    >
       <slot />
     </main>
     <!-- <img src={pattern} class="absolute top-0 " /> -->
