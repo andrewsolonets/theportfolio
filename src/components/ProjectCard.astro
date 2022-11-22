@@ -1,6 +1,7 @@
 ---
-import githubIcon from "../../public/assets/github.svg";
-import linkIcon from "../../public/assets/external-link.svg";
+import ExternalLinkIcon from "../../public/assets/ExternalLink";
+import GithubIcon from "../../public/assets/GithubIcon";
+
 export interface Props {
   title: string;
   text: string;
@@ -13,7 +14,10 @@ const { title, text, tags, img, position } = Astro.props;
 
 <div class="flex w-full items-center">
   <div class={`${position === "left" ? "order-1" : "order-2 "} `}>
-    <img src={img} class="lg:max-w-lg max-w-md object-fit rounded-lg z-10" />
+    <img
+      src={img}
+      class="lg:max-w-lg max-w-md object-fit rounded-lg z-10 drop-shadow-2xl"
+    />
   </div>
 
   <div
@@ -25,9 +29,11 @@ const { title, text, tags, img, position } = Astro.props;
   >
     <div class={`${position === "left" ? "text-right " : "text-left"}`}>
       <h4 class="font-sans text-secondary font-semibold">Featured Project</h4>
-      <h2 class="font-bold text-4xl">{title}</h2>
+      <h2 class="font-bold text-4xl hover:text-secondary">{title}</h2>
     </div>
-    <div class="bg-primary-glass/70 py-6 px-10 z-20 rounded-xl drop-shadow-md">
+    <div
+      class="bg-primary-glass/70 py-6 px-10 z-20 rounded-xl drop-shadow-md hover:drop-shadow-lg"
+    >
       <p
         class={`font-medium ${
           position === "left" ? "text-right " : "text-left"
@@ -40,8 +46,10 @@ const { title, text, tags, img, position } = Astro.props;
       {tags.map((tag) => <p>{tag}</p>)}
     </div>
     <div class="flex gap-2">
-      <a href="#"><img src={githubIcon} class="hover:stroke-primary" /></a>
-      <a href="#"><img src={linkIcon} /></a>
+      <a href="#" class="group">
+        <GithubIcon class="stroke-2 w-7 h-7" />
+      </a>
+      <a href="#" class="group"><ExternalLinkIcon class="stroke-2 w-7" /></a>
     </div>
   </div>
 </div>

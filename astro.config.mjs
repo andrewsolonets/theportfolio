@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 import preact from "@astrojs/preact";
@@ -9,7 +9,7 @@ import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [preact(), tailwind()],
+  integrations: [preact({ compat: true }), tailwind()],
   output: "server",
-  adapter: netlify()
+  adapter: netlify(),
 });
