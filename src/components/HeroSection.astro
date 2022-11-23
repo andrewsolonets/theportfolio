@@ -26,11 +26,24 @@ import arrowMobile from "../../public/assets/arrowMobile.png";
       <img src={arrowMobile} class="" />
     </div>
 
-    <img src={funPic} class="w-[700px]" />
+    <img
+      src={funPic}
+      id="mainPic"
+      class="w-[700px]"
+      data-tilt
+      data-tilt-reverse="true"
+      data-tilt-max="12"
+      data-tilt-speed="3000"
+    />
   </div>
 </section>
+
 <script>
   import Typewriter from "typewriter-effect/dist/core";
+  import VanillaTilt from "vanilla-tilt";
+
+  const selectedImg = document.getElementById("#mainPic");
+  VanillaTilt.init(selectedImg as HTMLImageElement);
 
   const typewriter = new Typewriter("#typewriter", {
     autoStart: true,
