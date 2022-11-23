@@ -1,4 +1,6 @@
 ---
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import ProjectCard from "./ProjectCard.astro";
 import placeholder from "../../public/assets/placeholderProject.jpg";
 import { projects } from "../content/projects.json";
@@ -11,19 +13,30 @@ import { projects } from "../content/projects.json";
   <h1 class="font-section text-4xl md:text-5xl">
     Take a Look At <span class="text-secondary">My Projects</span>
   </h1>
-  <div class="flex flex-col gap-32 items-center justify-center md:text-lg">
+  <div
+    class="flex flex-col gap-64 items-center justify-center md:text-lg overflow-clip"
+  >
     {
       projects.map((el) => {
         return (
-          <ProjectCard
-            title={el.title}
-            img={placeholder}
-            text={el.text}
-            tags={el.tags}
-            position={el.position}
-          />
+          <div data-aos={`slide-${el.position === "left" ? "right" : "left"}`}>
+            <ProjectCard
+              title={el.title}
+              img={placeholder}
+              text={el.text}
+              tags={el.tags}
+              position={el.position}
+              githubLink={el.githubLink}
+              demoLink={el.demoLink}
+            />
+          </div>
         );
       })
     }
   </div>
 </section>
+<script>
+  import "aos/dist/aos.css";
+  import AOS from "aos";
+  AOS.init({ duration: 2000, offset: 100, easing: "ease-out-quad" });
+</script>

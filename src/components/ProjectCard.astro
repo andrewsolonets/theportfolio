@@ -8,15 +8,21 @@ export interface Props {
   tags: string[];
   img: string;
   position: string;
+  demoLink: string;
+  githubLink: string;
 }
-const { title, text, tags, img, position } = Astro.props;
+const { title, text, tags, img, position, demoLink, githubLink } = Astro.props;
 ---
 
 <div
   id="cardId"
   class="flex w-full relative items-center bg-cover md:bg-none md:px-0 md:py-0 px-4 py-4"
 >
-  <div class={`${position === "left" ? "order-1" : "order-2 "} `}>
+  <div
+    class={`${position === "left" ? "order-1" : "order-2 "}  `}
+    data-aos={`zoom-in-${position === "left" ? "right" : "left"}`}
+    data-aos-duration="1200"
+  >
     <img
       src={img}
       class="md:flex hidden lg:max-w-lg max-w-md object-fit rounded-lg z-10 drop-shadow-2xl"
@@ -37,13 +43,29 @@ const { title, text, tags, img, position } = Astro.props;
           : "md:text-left text-center"
       } `}
     >
-      <h4 class="font-sans text-secondary font-semibold">Featured Project</h4>
-      <h2 class="font-bold md:text-4xl text-4xl hover:text-secondary">
+      <h4
+        class="font-sans text-secondary font-semibold"
+        data-aos={`slide-${position === "left" ? "right" : "left"}`}
+        data-aos-delay="280"
+        data-aos-duration="1000"
+      >
+        Featured Project
+      </h4>
+      <h2
+        class="font-bold md:text-4xl text-4xl hover:text-secondary"
+        data-aos={`slide-${position === "left" ? "right" : "left"}`}
+        data-aos-delay="320"
+        data-aos-duration="1000"
+      >
         {title}
       </h2>
     </div>
     <div
       class="md:bg-primary-glass/70 md:py-6 md:px-10 z-20 rounded-xl drop-shadow-md hover:drop-shadow-lg"
+      data-aos={`slide-${position === "left" ? "right" : "left"}`}
+      data-aos-delay="120"
+      data-aos-offset="30"
+      data-aos-duration="1000"
     >
       <p
         class={`font-medium ${
@@ -59,16 +81,35 @@ const { title, text, tags, img, position } = Astro.props;
       class={`flex gap-4 text-secondary font-semibold flex-wrap items-start ${
         position === "left" ? "md:justify-end" : "md:justify-start"
       } justify-center md:w-[90%]`}
+      data-aos={`slide-${position === "left" ? "right" : "left"}`}
+      data-aos-delay="120"
+      data-aos-offset="-10"
+      data-aos-duration="1000"
     >
       {tags.map((tag) => <p>{tag}</p>)}
     </div>
-    <div class="flex gap-2">
-      <a href="#" class="group">
-        <GithubIcon class="stroke-2 w-7 h-7 hover:stroke-secondary" />
+    <div
+      class="flex gap-2"
+      data-aos={`slide-${position === "left" ? "right" : "left"}`}
+      data-aos-delay="180"
+      data-aos-offset="-20"
+      data-aos-duration="1000"
+    >
+      <a href={githubLink} class="group">
+        <GithubIcon
+          class="stroke-2 w-7 h-7 group-hover:stroke-secondary hover:stroke-secondary"
+        />
       </a>
-      <a href="#" class="group"
-        ><ExternalLinkIcon class="stroke-2 w-7 hover:stroke-secondary" />
+      <a href={demoLink} class="group"
+        ><ExternalLinkIcon
+          class="stroke-2 w-7 group-hover:stroke-seconda hover:stroke-secondary"
+        />
       </a>
     </div>
   </div>
 </div>
+<script>
+  import "aos/dist/aos.css";
+  import AOS from "aos";
+  AOS.init({ duration: 800, delay: 140, easing: "ease-out-quad" });
+</script>

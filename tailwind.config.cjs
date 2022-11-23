@@ -31,6 +31,21 @@ module.exports = {
       backgroundImage: {
         bgPattern: "url('/public/assets/bgPattern.png')",
       },
+      keyframes: {
+        wave: {
+          "0%": { transform: "rotate(0.0deg)" },
+          "10%": { transform: "rotate(-6deg)" },
+          "20%": { transform: "rotate(3deg)" },
+          "30%": { transform: "rotate(-6deg)" },
+          "40%": { transform: "rotate(2deg)" },
+          "50%": { transform: "rotate(-6deg)" },
+          "60%": { transform: "rotate(0.0deg)" },
+          "100%": { transform: "rotate(0.0deg)" },
+        },
+      },
+      animation: {
+        "waving-arrow": "wave 2.5s linear infinite",
+      },
     },
   },
   plugins: [require("@tailwindcss/forms")],

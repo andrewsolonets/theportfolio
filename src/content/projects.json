@@ -13,6 +13,8 @@
     {
       "title": "Lorem Ipsum",
       "img": "",
+      "githubLink": "#",
+      "demoLink": "#",
       "text": "Lorem ipsum dolor sit amet consectetur. Iaculis non nunc non nec risus aliquet at massa. Sed elementum purus nisl fermentum tortor sit eleifend lobortis ipsum.",
       "tags": [
         "Next.js",
@@ -27,6 +29,40 @@
     {
       "title": "Lorem Ipsum",
       "img": "",
+      "githubLink": "#",
+      "demoLink": "#",
+      "text": "Lorem ipsum dolor sit amet consectetur. Iaculis non nunc non nec risus aliquet at massa. Sed elementum purus nisl fermentum tortor sit eleifend lobortis ipsum .",
+      "tags": [
+        "Next.js",
+        "Tailwind",
+        "Next.js",
+        "Tailwind",
+        "Next.js",
+        "Tailwind"
+      ],
+      "position": "right"
+    },
+    {
+      "title": "Lorem Ipsum",
+      "img": "",
+      "githubLink": "#",
+      "demoLink": "#",
+      "text": "Lorem ipsum dolor sit amet consectetur. Iaculis non nunc non nec risus aliquet at massa. Sed elementum purus nisl fermentum tortor sit eleifend lobortis ipsum.",
+      "tags": [
+        "Next.js",
+        "Tailwind",
+        "Next.js",
+        "Tailwind",
+        "Next.js",
+        "Tailwind"
+      ],
+      "position": "left"
+    },
+    {
+      "title": "Lorem Ipsum",
+      "img": "",
+      "githubLink": "#",
+      "demoLink": "#",
       "text": "Lorem ipsum dolor sit amet consectetur. Iaculis non nunc non nec risus aliquet at massa. Sed elementum purus nisl fermentum tortor sit eleifend lobortis ipsum .",
       "tags": [
         "Next.js",
