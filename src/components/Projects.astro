@@ -19,7 +19,7 @@ import { projects } from "../content/projects.json";
     {
       projects.map((el) => {
         return (
-          <div data-aos={`slide-${el.position === "left" ? "right" : "left"}`}>
+          <div data-aos={`fade-up`}>
             <ProjectCard
               title={el.title}
               img={placeholder}
@@ -38,5 +38,5 @@ import { projects } from "../content/projects.json";
 <script>
   import "aos/dist/aos.css";
   import AOS from "aos";
-  AOS.init({ duration: 2000, offset: 0, easing: "ease-out-sine" });
+  AOS.init({ duration: 1000, offset: 100, easing: "ease-out-sine" });
 </script>
