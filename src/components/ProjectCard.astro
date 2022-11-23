@@ -21,7 +21,7 @@ const { title, text, tags, img, position, demoLink, githubLink } = Astro.props;
   <div
     class={`${position === "left" ? "order-1" : "order-2 "}  `}
     data-aos={`zoom-in-${position === "left" ? "right" : "left"}`}
-    data-aos-duration="1200"
+    data-aos-duration="2000"
   >
     <img
       src={img}
@@ -46,8 +46,6 @@ const { title, text, tags, img, position, demoLink, githubLink } = Astro.props;
       <h4
         class="font-sans text-secondary font-semibold"
         data-aos={`slide-${position === "left" ? "right" : "left"}`}
-        data-aos-delay="280"
-        data-aos-duration="1000"
       >
         Featured Project
       </h4>
@@ -55,7 +53,6 @@ const { title, text, tags, img, position, demoLink, githubLink } = Astro.props;
         class="font-bold md:text-4xl text-4xl hover:text-secondary"
         data-aos={`slide-${position === "left" ? "right" : "left"}`}
         data-aos-delay="320"
-        data-aos-duration="1000"
       >
         {title}
       </h2>
@@ -65,7 +62,6 @@ const { title, text, tags, img, position, demoLink, githubLink } = Astro.props;
       data-aos={`slide-${position === "left" ? "right" : "left"}`}
       data-aos-delay="120"
       data-aos-offset="30"
-      data-aos-duration="1000"
     >
       <p
         class={`font-medium ${
@@ -84,7 +80,6 @@ const { title, text, tags, img, position, demoLink, githubLink } = Astro.props;
       data-aos={`slide-${position === "left" ? "right" : "left"}`}
       data-aos-delay="120"
       data-aos-offset="-10"
-      data-aos-duration="1000"
     >
       {tags.map((tag) => <p>{tag}</p>)}
     </div>
@@ -93,7 +88,6 @@ const { title, text, tags, img, position, demoLink, githubLink } = Astro.props;
       data-aos={`slide-${position === "left" ? "right" : "left"}`}
       data-aos-delay="180"
       data-aos-offset="-20"
-      data-aos-duration="1000"
     >
       <a href={githubLink} class="group">
         <GithubIcon
@@ -111,5 +105,5 @@ const { title, text, tags, img, position, demoLink, githubLink } = Astro.props;
 <script>
   import "aos/dist/aos.css";
   import AOS from "aos";
-  AOS.init({ duration: 800, delay: 140, easing: "ease-out-quad" });
+  AOS.init({ duration: 1300, easing: "ease-out-sine" });
 </script>
