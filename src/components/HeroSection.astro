@@ -1,4 +1,6 @@
 ---
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import funPic from "../../public/assets/funPic.svg";
 import arrow from "../../public/assets/arrow.png";
 import arrowMobile from "../../public/assets/arrowMobile.png";
@@ -7,11 +9,13 @@ import arrowMobile from "../../public/assets/arrowMobile.png";
 <section
   class="flex flex-col w-full md:items-start items-center md:gap-0 gap-16"
 >
-  <h1
-    class="font-section text-4xl md:text-5xl md:w-[29rem] md:text-left text-center"
+  <!-- <h1
+    class="font-section text-4xl md:text-5xl md:leading-normal md:w-[29rem] md:text-left text-center md:min-h-[144px]"
   >
-    Hi, I’m <span class="text-secondary">Andrii Solonets</span> - a Full-Stack developer
-  </h1>
+    Hi, I’m <span class="text-secondary">Andrii Solonets</span><span
+      id="typewriter"></span>
+  </h1> -->
+  <div id="typewriter" class="md:text-left text-center md:min-h-[144px]"></div>
   <div class="self-end relative">
     <div class="md:flex hidden absolute md:-left-28 md:top-64">
       <img src={arrow} class="w-32" />
@@ -23,3 +27,23 @@ import arrowMobile from "../../public/assets/arrowMobile.png";
     <img src={funPic} class="w-[700px]" />
   </div>
 </section>
+<script>
+  import Typewriter from "typewriter-effect/dist/core";
+
+  const typewriter = new Typewriter("#typewriter", {
+    autoStart: true,
+    loop: true,
+    wrapperClassName: "font-section text-4xl md:text-5xl md:leading-normal ",
+    cursorClassName: "text-4xl md:text-5xl",
+  });
+
+  typewriter
+    .typeString("Hi, I’m <span class='text-secondary'>Andrii Solonets</span>")
+    .pauseFor(1000)
+    .deleteChars(15)
+    .typeString(" a Full-Stack developer")
+    .pauseFor(2500)
+    .start();
+
+  // typewriter.typeString(" - a Full-Stack developer").pauseFor(2500).start();
+</script>
