@@ -21,7 +21,7 @@ const { title, text, tags, img, position, demoLink, githubLink } = Astro.props;
   <div
     class={`${
       position === "left" ? "order-1" : "order-2 "
-    }  md:w-[60%] md:h-[350px] drop-shadow-2xl`}
+    }  md:w-[60%] md:min-w[520px] md:h-[350px] drop-shadow-2xl`}
   >
     <img
       src={img}
