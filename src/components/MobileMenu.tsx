@@ -1,16 +1,25 @@
 import { useState } from "preact/hooks";
-import { DesktopNav } from "./DesktopNav";
 
-export const MobileMenu = () => {
+interface Props {
+  setIsOpen: Function;
+  isOpen: boolean;
+}
+
+export const MobileMenu = ({ setIsOpen, isOpen }: Props) => {
   const [active, setActive] = useState();
   const setLink = (e: any) => {
+    setIsOpen(false);
     console.log(e.target.id);
     setActive(e.target.id);
     console.log("clicked");
   };
   return (
-    <div class="absolute right-0  z-10 bg-primary-glass/70 bottom-0 top-0">
-      <ul class="flex  w-full font-heading text-bold flex-col gap-4 px-4 py-4 bottom-0 h-full justify-between">
+    <aside
+      class={`md:hidden absolute inset-y-0 right-0 transform ${
+        isOpen ? "" : "translate-x-full "
+      } transition duration-200 ease-in-out min-h-screen z-10 bg-primary-glass/70 w-[60vw]`}
+    >
+      <ul class="flex  w-full font-heading text-bold flex-col gap-16 px-4 py-4 bottom-0 h-full justify-center  items-center">
         <li
           class={`active:text-secondary focus:text-secondary ${
             active === "projectsLink" && "text-secondary"
@@ -38,7 +47,16 @@ export const MobileMenu = () => {
             Contact
           </a>
         </li>
+        <li>
+          <a
+            href="https://drive.google.com/file/d/1Lnjq7vXpCMrYnDX3M1-ckaxR1PPwMNef/view?usp=sharing"
+            target="_blank"
+            class="rounded-sm transition-all duration-300 text-secondary bg-transparent outline outline-2 outline-secondary px-4 py-1 hover:bg-secondary hover:bg-opacity-10"
+          >
+            Resume
+          </a>
+        </li>
       </ul>
-    </div>
+    </aside>
   );
 };

@@ -28,14 +28,14 @@ export const Nav = () => {
 
   return (
     <header
-      class={`items-center transition backdrop-blur  flex sticky  z-50 justify-between py-3 drop-shadow-header bg-primary-glass/70 ${
+      class={`items-center  transition backdrop-blur duration-300  flex sticky  z-50 justify-between py-3 drop-shadow-header bg-primary-glass/70 ${
         visible ? "top-0" : "-translate-y-48"
-      } px-10`}
+      } px-10 `}
     >
       <h3>Andrii S.</h3>
       <DesktopNav />
       <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
-      {isOpen && <MobileMenu />}
+      <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
     </header>
   );
 };

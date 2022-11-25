@@ -38,9 +38,13 @@ export const DesktopNav = () => {
           </a>
         </li>
         <li>
-          <button class="rounded-sm text-secondary bg-transparent outline outline-2 outline-secondary px-4 py-1 hover:bg-secondary hover:bg-opacity-10">
+          <a
+            href="https://drive.google.com/file/d/1Lnjq7vXpCMrYnDX3M1-ckaxR1PPwMNef/view?usp=sharing"
+            target="_blank"
+            class="rounded-sm transition-all duration-300 text-secondary bg-transparent outline outline-2 outline-secondary px-4 py-1 hover:bg-secondary hover:bg-opacity-10"
+          >
             Resume
-          </button>
+          </a>
         </li>
       </ul>
     </nav>
