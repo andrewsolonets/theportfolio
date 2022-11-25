@@ -15,13 +15,13 @@ export const MobileMenu = ({ setIsOpen, isOpen }: Props) => {
   };
   return (
     <div
-      class={`md:hidden overflow-hidden absolute opacity-1 inset-y-0 right-0 transform ${
+      class={`opacity-1 absolute inset-y-0 right-0 transform overflow-hidden md:hidden ${
         isOpen ? "" : "translate-x-full opacity-0"
-      } animate duration-500 ease-out min-h-screen z-10 bg-primary-glass/70 w-[60vw]`}
+      } animate z-10 min-h-screen w-[60vw] bg-primary-glass/70 duration-500 ease-out`}
     >
-      <ul class="flex  w-full font-heading text-bold flex-col gap-16 px-4 py-4 bottom-0 h-full justify-center  items-center">
+      <ul class="text-bold  bottom-0 flex h-full w-full flex-col items-center justify-center gap-16 px-4 py-4  font-heading">
         <li
-          class={`active:text-secondary focus:text-secondary ${
+          class={`focus:text-secondary active:text-secondary ${
             active === "projectsLink" && "text-secondary"
           }`}
         >
@@ -30,7 +30,7 @@ export const MobileMenu = ({ setIsOpen, isOpen }: Props) => {
           </a>
         </li>
         <li
-          class={`active:text-secondary focus:text-secondary ${
+          class={`focus:text-secondary active:text-secondary ${
             active === "aboutLink" && "text-secondary"
           }`}
         >
@@ -39,7 +39,7 @@ export const MobileMenu = ({ setIsOpen, isOpen }: Props) => {
           </a>
         </li>
         <li
-          class={`active:text-secondary focus:text-secondary ${
+          class={`focus:text-secondary active:text-secondary ${
             active === "contactLink" && "text-secondary"
           }`}
         >
@@ -51,7 +51,7 @@ export const MobileMenu = ({ setIsOpen, isOpen }: Props) => {
           <a
             href="https://drive.google.com/file/d/1Lnjq7vXpCMrYnDX3M1-ckaxR1PPwMNef/view?usp=sharing"
             target="_blank"
-            class="rounded-sm transition-all duration-300 text-secondary bg-transparent outline outline-2 outline-secondary px-4 py-1 hover:bg-secondary hover:bg-opacity-10"
+            class="rounded-sm bg-transparent px-4 py-1 text-secondary outline outline-2 outline-secondary transition-all duration-300 hover:bg-secondary hover:bg-opacity-10"
           >
             Resume
           </a>

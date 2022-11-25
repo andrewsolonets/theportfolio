@@ -5,13 +5,13 @@ import { recentTech } from "../content/projects.json";
 
 <section
   id="about"
-  class="flex flex-col w-full gap-20 md:items-start items-center text-center md:text-left"
+  class="flex w-full flex-col items-center gap-20 text-center md:items-start md:text-left"
 >
   <h1 class="font-section text-4xl md:text-5xl" data-aos="fade-up">About Me</h1>
   <div
-    class="flex md:gap-64 gap-20 md:flex-row flex-col md:items-start items-center"
+    class="flex flex-col items-center gap-20 md:flex-row md:items-start md:gap-64"
   >
-    <div class="flex flex-col gap-8 w-full md:w-1/2 md:order-1 order-2">
+    <div class="order-2 flex w-full flex-col gap-8 md:order-1 md:w-1/2">
       <p class="font-medium md:text-lg" data-aos="fade-up">
         I’m 18 y.o Ukrainian, currently in London, UK. Fast learner, passionate
         about making smooth, well-architectured web apps, and have experience
@@ -24,11 +24,11 @@ import { recentTech } from "../content/projects.json";
           Here are a few technologies I’ve been working with recently:
         </p>
         <ul
-          class="list-inside list-disc md:max-w-fit flex-wrap md:h-20 h-32 flex flex-col gap-1 text-left marker:text-secondary"
+          class="flex h-32 list-inside list-disc flex-col flex-wrap gap-1 text-left marker:text-secondary md:h-20 md:max-w-fit"
         >
           {
             recentTech.map((el) => (
-              <li class="mr-2 md:mr-8 md:text-base text-sm">{el}</li>
+              <li class="mr-2 text-sm md:mr-8 md:text-base">{el}</li>
             ))
           }
         </ul>
@@ -39,7 +39,7 @@ import { recentTech } from "../content/projects.json";
       alt="avatar"
       src={picture}
       data-aos="fade-up"
-      class="drop-shadow-2xl object-cover w-52 h-52 rounded-full border-[14px] md:order-2 order-1 border-secondary hover:drop-shadow-xl"
+      class="order-1 h-52 w-52 rounded-full border-[14px] border-secondary object-cover drop-shadow-2xl hover:drop-shadow-xl md:order-2"
     />
   </div>
 </section>

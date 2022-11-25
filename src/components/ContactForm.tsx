@@ -18,7 +18,7 @@ export const ContactForm = () => {
   return (
     <form
       onSubmit={submitCallback}
-      class="flex md:w-1/2 w-full flex-col gap-8"
+      class="flex w-full flex-col gap-8 md:w-1/2"
       // action="https://getform.io/f/d384645e-fbbd-4511-bc35-a8f6094793bd"
       // method="POST"
     >
@@ -30,7 +30,7 @@ export const ContactForm = () => {
           placeholder="Name"
           id="name"
           required
-          class="placeholder-transparent outline-none rounded-lg border-none w-full  focus:ring-0 peer bg-primary-glass/70"
+          class="peer w-full rounded-lg border-none bg-primary-glass/70  placeholder-transparent outline-none focus:ring-0"
         />
         <label
           htmlFor="username"
@@ -46,7 +46,7 @@ export const ContactForm = () => {
           required
           placeholder="Email"
           id="email"
-          class="placeholder-transparent outline-none rounded-lg border-none w-full  focus:ring-0 peer bg-primary-glass/70"
+          class="peer w-full rounded-lg border-none bg-primary-glass/70  placeholder-transparent outline-none focus:ring-0"
         />
         <label
           htmlFor="email"
@@ -62,7 +62,7 @@ export const ContactForm = () => {
           placeholder="Message"
           rows={10}
           required
-          className="w-full bg-primary-glass/70 border-none outline-none rounded-lg focus:outline-none placeholder-transparent peer "
+          className="peer w-full rounded-lg border-none bg-primary-glass/70 placeholder-transparent outline-none focus:outline-none "
         />
         <label
           htmlFor="message"
@@ -73,7 +73,7 @@ export const ContactForm = () => {
       </div>
 
       <button
-        class="px-4 py-2 text-primary bg-secondary font-medium text-xl rounded-xl"
+        class="rounded-xl bg-secondary px-4 py-2 text-xl font-medium text-primary"
         type="submit"
       >
         Submit

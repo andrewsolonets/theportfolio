@@ -16,17 +16,21 @@ const { title, text, tags, img, position, demoLink, githubLink } = Astro.props;
 
 <div
   id="cardId"
-  class="flex w-full relative justify-between items-center bg-cover md:bg-none md:px-0 md:py-0 px-4 py-4"
+  class="relative flex w-full items-center justify-between bg-cover px-4 py-4 md:bg-none md:px-0 md:py-0"
 >
   <div
     class={`${
       position === "left" ? "order-1" : "order-2 "
-    }  md:w-[60%] md:min-w[520px] md:h-[350px] drop-shadow-2xl`}
+    }  md:w-[60%] md:min-w[520px] md:h-[350px]  border-4 border-transparent hover:border-secondary rounded-lg  drop-shadow-2xl group overflow-hidden  transition-all duration-500`}
   >
+    <div
+      class="absolute z-10 hidden h-full w-full bg-primary-dark object-cover opacity-30 bg-blend-overlay transition duration-500 group-hover:opacity-0 md:flex"
+    >
+    </div>
     <img
       src={img}
       alt="projectImage"
-      class="md:flex hidden object-cover w-full h-full rounded-lg z-10"
+      class="z-10 hidden h-full w-full scale-100 object-cover transition-all duration-700 group-hover:scale-110 md:flex"
     />
   </div>
 
@@ -44,15 +48,15 @@ const { title, text, tags, img, position, demoLink, githubLink } = Astro.props;
           : "md:text-left text-center"
       } `}
     >
-      <h4 class="font-sans text-secondary font-semibold">Featured Project</h4>
-      <h2 class="font-bold md:text-4xl text-4xl hover:text-secondary">
+      <h4 class="font-sans font-semibold text-secondary">Featured Project</h4>
+      <h2 class="text-4xl font-bold hover:text-secondary md:text-4xl">
         <a href={demoLink}>
           {title}
         </a>
       </h2>
     </div>
     <div
-      class="md:bg-primary-glass/70 md:py-6 md:min-w-full md:px-10 z-20 rounded-xl drop-shadow-md hover:drop-shadow-lg"
+      class="z-20 rounded-xl drop-shadow-md hover:drop-shadow-lg md:min-w-full md:bg-primary-glass/70 md:py-6 md:px-10"
     >
       <p
         class={`font-medium ${

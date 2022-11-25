@@ -5,19 +5,19 @@ import arrowMobile from "../../public/assets/arrowMobile.png";
 ---
 
 <section
-  class="flex flex-col w-full md:items-start items-center md:gap-0 gap-16"
+  class="flex w-full flex-col items-center gap-16 md:items-start md:gap-0"
 >
-  <div id="typewriter" class="md:text-left text-center md:min-h-[144px]"></div>
-  <div class="self-end relative">
+  <div id="typewriter" class="text-center md:min-h-[144px] md:text-left"></div>
+  <div class="relative self-end">
     <div
-      class="md:flex hidden absolute md:-left-28 md:top-64 animate-waving-arrow"
+      class="absolute hidden animate-waving-arrow md:-left-28 md:top-64 md:flex"
     >
       <img src={arrow} class="w-32" alt="arrow" />
     </div>
-    <div class="md:hidden flex absolute -top-8 left-8 animate-waving-arrow">
+    <div class="absolute -top-8 left-8 flex animate-waving-arrow md:hidden">
       <img src={arrowMobile} alt="mobileArrow" />
     </div>
-    <div class="w-fit md:min-w-[700px] md:min-h-[500px]">
+    <div class="w-fit md:min-h-[500px] md:min-w-[700px]">
       <img
         src={funPic}
         alt="mainPicture"

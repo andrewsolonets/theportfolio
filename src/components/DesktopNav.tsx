@@ -8,10 +8,10 @@ export const DesktopNav = () => {
     console.log("clicked");
   };
   return (
-    <nav class=" md:flex hidden ">
-      <ul class="flex justify-around w-full font-heading text-bold items-center gap-16">
+    <nav class=" hidden md:flex ">
+      <ul class="text-bold flex w-full items-center justify-around gap-16 font-heading">
         <li
-          class={`active:text-secondary focus:text-secondary hover:text-secondary ${
+          class={`hover:text-secondary focus:text-secondary active:text-secondary ${
             active === "projectsLink" && "text-secondary"
           }`}
         >
@@ -20,7 +20,7 @@ export const DesktopNav = () => {
           </a>
         </li>
         <li
-          class={`active:text-secondary focus:text-secondary hover:text-secondary ${
+          class={`hover:text-secondary focus:text-secondary active:text-secondary ${
             active === "aboutLink" && "text-secondary"
           }`}
         >
@@ -29,7 +29,7 @@ export const DesktopNav = () => {
           </a>
         </li>
         <li
-          class={`active:text-secondary focus:text-secondary  hover:text-secondary ${
+          class={`hover:text-secondary focus:text-secondary  active:text-secondary ${
             active === "contactLink" && "text-secondary"
           }`}
         >
@@ -41,7 +41,7 @@ export const DesktopNav = () => {
           <a
             href="https://drive.google.com/file/d/1Lnjq7vXpCMrYnDX3M1-ckaxR1PPwMNef/view?usp=sharing"
             target="_blank"
-            class="rounded-sm transition-all duration-300 text-secondary bg-transparent outline outline-2 outline-secondary px-4 py-1 hover:bg-secondary hover:bg-opacity-10"
+            class="rounded-sm bg-transparent px-4 py-1 text-secondary outline outline-2 outline-secondary transition-all duration-300 hover:bg-secondary hover:bg-opacity-10"
           >
             Resume
           </a>
