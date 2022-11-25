@@ -11,8 +11,8 @@
   ],
   "projects": [
     {
-      "title": "Lorem Ipsum",
-      "img": "",
+      "title": "PetsPaw",
+      "img": "/assets/petspaws.png",
       "githubLink": "#",
       "demoLink": "#",
       "text": "Lorem ipsum dolor sit amet consectetur. Iaculis non nunc non nec risus aliquet at massa. Sed elementum purus nisl fermentum tortor sit eleifend lobortis ipsum.",
@@ -27,8 +27,8 @@
       "position": "left"
     },
     {
-      "title": "Lorem Ipsum",
-      "img": "",
+      "title": "Banquee",
+      "img": "/assets/banquee.png",
       "githubLink": "#",
       "demoLink": "#",
       "text": "Lorem ipsum dolor sit amet consectetur. Iaculis non nunc non nec risus aliquet at massa. Sed elementum purus nisl fermentum tortor sit eleifend lobortis ipsum .",
@@ -43,8 +43,8 @@
       "position": "right"
     },
     {
-      "title": "Lorem Ipsum",
-      "img": "",
+      "title": "The Chat App",
+      "img": "/assets/thechatapp.png",
       "githubLink": "#",
       "demoLink": "#",
       "text": "Lorem ipsum dolor sit amet consectetur. Iaculis non nunc non nec risus aliquet at massa. Sed elementum purus nisl fermentum tortor sit eleifend lobortis ipsum.",
@@ -60,7 +60,7 @@
     },
     {
       "title": "Lorem Ipsum",
-      "img": "",
+      "img": "/assets/banquee.png",
       "githubLink": "#",
       "demoLink": "#",
       "text": "Lorem ipsum dolor sit amet consectetur. Iaculis non nunc non nec risus aliquet at massa. Sed elementum purus nisl fermentum tortor sit eleifend lobortis ipsum .",

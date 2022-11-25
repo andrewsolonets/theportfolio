@@ -11,7 +11,7 @@ export const DesktopNav = () => {
     <nav class=" md:flex hidden ">
       <ul class="flex justify-around w-full font-heading text-bold items-center gap-16">
         <li
-          class={`active:text-secondary focus:text-secondary ${
+          class={`active:text-secondary focus:text-secondary hover:text-secondary ${
             active === "projectsLink" && "text-secondary"
           }`}
         >
@@ -20,7 +20,7 @@ export const DesktopNav = () => {
           </a>
         </li>
         <li
-          class={`active:text-secondary focus:text-secondary ${
+          class={`active:text-secondary focus:text-secondary hover:text-secondary ${
             active === "aboutLink" && "text-secondary"
           }`}
         >
@@ -29,7 +29,7 @@ export const DesktopNav = () => {
           </a>
         </li>
         <li
-          class={`active:text-secondary focus:text-secondary ${
+          class={`active:text-secondary focus:text-secondary  hover:text-secondary ${
             active === "contactLink" && "text-secondary"
           }`}
         >
