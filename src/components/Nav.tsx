@@ -28,7 +28,7 @@ export const Nav = () => {
 
   return (
     <header
-      class={`items-center  transition backdrop-blur duration-300  flex sticky  z-50 justify-between py-3 drop-shadow-header bg-primary-glass/70 ${
+      class={`items-center  transition backdrop-blur duration-300 fixed left-0 right-0 flex z-50 justify-between py-4 drop-shadow-header bg-primary-glass/70 ${
         visible ? "top-0" : "-translate-y-48"
       } px-10 `}
     >

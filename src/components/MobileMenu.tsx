@@ -14,10 +14,10 @@ export const MobileMenu = ({ setIsOpen, isOpen }: Props) => {
     console.log("clicked");
   };
   return (
-    <aside
-      class={`md:hidden absolute inset-y-0 right-0 transform ${
-        isOpen ? "" : "translate-x-full "
-      } transition duration-200 ease-in-out min-h-screen z-10 bg-primary-glass/70 w-[60vw]`}
+    <div
+      class={`md:hidden overflow-hidden absolute opacity-1 inset-y-0 right-0 transform ${
+        isOpen ? "" : "translate-x-full opacity-0"
+      } animate duration-500 ease-out min-h-screen z-10 bg-primary-glass/70 w-[60vw]`}
     >
       <ul class="flex  w-full font-heading text-bold flex-col gap-16 px-4 py-4 bottom-0 h-full justify-center  items-center">
         <li
@@ -57,6 +57,6 @@ export const MobileMenu = ({ setIsOpen, isOpen }: Props) => {
           </a>
         </li>
       </ul>
-    </aside>
+    </div>
   );
 };
