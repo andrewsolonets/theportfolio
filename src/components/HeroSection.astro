@@ -1,6 +1,4 @@
 ---
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import funPic from "../../public/assets/funPic.svg";
 import arrow from "../../public/assets/arrow.png";
 import arrowMobile from "../../public/assets/arrowMobile.png";
@@ -25,17 +23,18 @@ import arrowMobile from "../../public/assets/arrowMobile.png";
     <div class="md:hidden flex absolute -top-8 left-8">
       <img src={arrowMobile} alt="mobileArrow" />
     </div>
-
-    <img
-      src={funPic}
-      alt="mainPicture"
-      id="mainPic"
-      class="w-[700px]"
-      data-tilt
-      data-tilt-reverse="true"
-      data-tilt-max="12"
-      data-tilt-speed="3000"
-    />
+    <div class="w-fit min-w-[700px] min-h-[500px]">
+      <img
+        src={funPic}
+        alt="mainPicture"
+        id="mainPic"
+        class="w-[700px]"
+        data-tilt
+        data-tilt-reverse="true"
+        data-tilt-max="12"
+        data-tilt-speed="3000"
+      />
+    </div>
   </div>
 </section>
 

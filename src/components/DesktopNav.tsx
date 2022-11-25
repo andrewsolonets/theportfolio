@@ -8,8 +8,8 @@ export const DesktopNav = () => {
     console.log("clicked");
   };
   return (
-    <nav class="w-1/3 md:flex hidden ">
-      <ul class="flex justify-around w-full font-heading text-bold">
+    <nav class=" md:flex hidden ">
+      <ul class="flex justify-around w-full font-heading text-bold items-center gap-16">
         <li
           class={`active:text-secondary focus:text-secondary ${
             active === "projectsLink" && "text-secondary"
@@ -36,6 +36,11 @@ export const DesktopNav = () => {
           <a id="contactLink" onClick={setLink} href="#contact">
             Contact
           </a>
+        </li>
+        <li>
+          <button class="rounded-sm text-secondary bg-transparent outline outline-2 outline-secondary px-4 py-1 hover:bg-secondary hover:bg-opacity-10">
+            Resume
+          </button>
         </li>
       </ul>
     </nav>
