@@ -9,7 +9,7 @@ import { recentTech } from "../content/projects.json";
 >
   <h1 class="font-section text-4xl md:text-5xl" data-aos="fade-up">About Me</h1>
   <div
-    class="flex flex-col items-center gap-20 md:flex-row md:items-start md:gap-64"
+    class="flex flex-col items-center gap-20 md:flex-row md:items-start lg:gap-64 md:gap-20 2xl:gap-0 2xl:justify-between"
   >
     <div class="order-2 flex w-full flex-col gap-8 md:order-1 md:w-1/2">
       <p class="font-medium md:text-lg" data-aos="fade-up">
@@ -24,7 +24,7 @@ import { recentTech } from "../content/projects.json";
           Here are a few technologies I’ve been working with recently:
         </p>
         <ul
-          class="flex h-32 list-inside list-disc flex-col flex-wrap gap-1 text-left marker:text-secondary md:h-20 md:max-w-fit"
+          class="flex h-32 list-inside list-disc flex-col flex-wrap gap-1 text-left marker:text-secondary md:h-20 lg:max-w-fit"
         >
           {
             recentTech.map((el) => (

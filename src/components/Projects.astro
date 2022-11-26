@@ -1,18 +1,17 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
-import placeholder from "../../public/assets/placeholderProject.jpg";
 import { projects } from "../content/projects.json";
 ---
 
 <section
   id="projects"
-  class="flex w-full flex-col items-center gap-48 pb-6 md:items-start"
+  class="flex w-full flex-col items-center gap-24 md:gap-48 pb-6 md:items-start"
 >
-  <h1 class="font-section text-4xl md:text-5xl">
+  <h1 class="font-section text-4xl md:text-5xl md:text-left text-center">
     Take a Look At <span class="text-secondary">My Projects</span>
   </h1>
   <div
-    class="flex flex-col items-center justify-center gap-64 overflow-clip md:text-lg"
+    class="flex flex-col items-center justify-center gap-24 md:gap-64 md:text-lg"
   >
     {
       projects.map((el) => {

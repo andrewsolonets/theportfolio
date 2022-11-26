@@ -5,24 +5,30 @@ import arrowMobile from "../../public/assets/arrowMobile.png";
 ---
 
 <section
-  class="flex w-full flex-col items-center gap-16 md:items-start md:gap-0"
+  class="flex w-full flex-col items-center gap-24 md:items-start md:gap-0"
 >
-  <div id="typewriter" class="text-center md:min-h-[144px] md:text-left"></div>
+  <div
+    id="typewriter"
+    class="text-center md:min-h-[144px] md:text-left min-h-[80px]"
+  >
+  </div>
   <div class="relative self-end">
     <div
-      class="absolute hidden animate-waving-arrow md:-left-28 md:top-64 md:flex"
+      class="absolute hidden animate-waving-arrow md:-left-28 md:top-52 lg:top-64 md:flex 2xl:top-96"
     >
       <img src={arrow} class="w-32" alt="arrow" />
     </div>
     <div class="absolute -top-8 left-8 flex animate-waving-arrow md:hidden">
       <img src={arrowMobile} alt="mobileArrow" />
     </div>
-    <div class="w-fit md:min-h-[500px] md:min-w-[700px]">
+    <div
+      class="w-fit lg:min-h-[500px] md:min-w-[600px] md:min-h-[400px] lg:min-w-[700px] min-w-[300px] min-h-[300px] 2xl:w-[1000px]"
+    >
       <img
         src={funPic}
         alt="mainPicture"
         id="mainPic"
-        class="w-[700px]"
+        class="md:w-[600px] lg:w-[700px] 2xl:w-[1000px]"
         data-tilt
         data-tilt-reverse="true"
         data-tilt-max="12"

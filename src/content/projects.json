@@ -13,66 +13,36 @@
     {
       "title": "PetsPaw",
       "img": "/assets/petspaws.png",
-      "githubLink": "#",
-      "demoLink": "#",
-      "text": "Lorem ipsum dolor sit amet consectetur. Iaculis non nunc non nec risus aliquet at massa. Sed elementum purus nisl fermentum tortor sit eleifend lobortis ipsum.",
-      "tags": [
-        "Next.js",
-        "Tailwind",
-        "Next.js",
-        "Tailwind",
-        "Next.js",
-        "Tailwind"
-      ],
+      "githubLink": "https://github.com/andrewsolonets/PetsPaw",
+      "demoLink": "https://petspaws.netlify.app/",
+      "text": "Social media app for cat lovers.  Voting, gallery, dark theme, info pages about each cat breed with pictures, ploading your cats, user actions history and search. Built with custom hooks and reusable components.",
+      "tags": ["React", "Styled-components"],
       "position": "left"
     },
     {
       "title": "Banquee",
       "img": "/assets/banquee.png",
-      "githubLink": "#",
-      "demoLink": "#",
-      "text": "Lorem ipsum dolor sit amet consectetur. Iaculis non nunc non nec risus aliquet at massa. Sed elementum purus nisl fermentum tortor sit eleifend lobortis ipsum .",
-      "tags": [
-        "Next.js",
-        "Tailwind",
-        "Next.js",
-        "Tailwind",
-        "Next.js",
-        "Tailwind"
-      ],
+      "githubLink": "https://github.com/andrewsolonets/Banquee-App",
+      "demoLink": "https://banquee-app.vercel.app/",
+      "text": "Multi-page landing for a bank with complex animations, CTA, blog, FAQ page, parallax effect. See more on github. ",
+      "tags": ["Next.js", "Tailwind", "Framer Motion"],
       "position": "right"
     },
     {
       "title": "The Chat App",
       "img": "/assets/thechatapp.png",
-      "githubLink": "#",
-      "demoLink": "#",
-      "text": "Lorem ipsum dolor sit amet consectetur. Iaculis non nunc non nec risus aliquet at massa. Sed elementum purus nisl fermentum tortor sit eleifend lobortis ipsum.",
+      "githubLink": "https://github.com/andrewsolonets/TheChatApp",
+      "demoLink": "https://thechatapp.vercel.app/",
+      "text": "Full-stack, real time messaging app with authentication, cookies, jwt, chats history persistence, avatar selection",
       "tags": [
         "Next.js",
         "Tailwind",
-        "Next.js",
-        "Tailwind",
-        "Next.js",
-        "Tailwind"
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Socket.io"
       ],
       "position": "left"
-    },
-    {
-      "title": "Lorem Ipsum",
-      "img": "/assets/banquee.png",
-      "githubLink": "#",
-      "demoLink": "#",
-      "text": "Lorem ipsum dolor sit amet consectetur. Iaculis non nunc non nec risus aliquet at massa. Sed elementum purus nisl fermentum tortor sit eleifend lobortis ipsum .",
-      "tags": [
-        "Next.js",
-        "Tailwind",
-        "Next.js",
-        "Tailwind",
-        "Next.js",
-        "Tailwind"
-      ],
-      "position": "right"
     }
   ]
 }
