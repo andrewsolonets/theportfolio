@@ -11,6 +11,23 @@
   ],
   "projects": [
     {
+      "title": "Azon Shop",
+      "img": "/assets/azon.png",
+      "githubLink": "https://github.com/andrewsolonets/Azon-Shop",
+      "demoLink": "https://azon-shop.vercel.app/",
+      "text": "E-Commerce website with optimistic updates, authentication, persistent cart, categories, infinite scroll and order tracking.",
+      "tags": [
+        "React",
+        "Tailwind CSS",
+        "Prisma",
+        "React Query",
+        "Trpc",
+        "MySQL",
+        "Stripe"
+      ],
+      "position": "right"
+    },
+    {
       "title": "PetsPaw",
       "img": "/assets/petspaws.png",
       "githubLink": "https://github.com/andrewsolonets/PetsPaw",
@@ -25,7 +42,7 @@
       "githubLink": "https://github.com/andrewsolonets/Banquee-App",
       "demoLink": "https://banquee-app.vercel.app/",
       "text": "Multi-page landing for a bank with complex animations, CTA, blog, FAQ page, parallax effect. See more on github. ",
-      "tags": ["Next.js", "Tailwind", "Framer Motion"],
+      "tags": ["Next.js", "Tailwind CSS", "Framer Motion"],
       "position": "right"
     },
     {
@@ -36,7 +53,7 @@
       "text": "Full-stack, real time messaging app with authentication, cookies, jwt, chats history persistence, avatar selection",
       "tags": [
         "Next.js",
-        "Tailwind",
+        "Tailwind CSS",
         "Node.js",
         "Express",
         "MongoDB",
