@@ -15,7 +15,7 @@
       "img": "/assets/azon.png",
       "githubLink": "https://github.com/andrewsolonets/Azon-Shop",
       "demoLink": "https://azon-shop.vercel.app/",
-      "text": "E-Commerce website with optimistic updates, authentication, persistent cart, categories, infinite scroll and order tracking.",
+      "text": "E-Commerce website with typescript, optimistic updates, authentication, persistent cart, categories, infinite scroll and order tracking.",
       "tags": [
         "React",
         "Tailwind CSS",
