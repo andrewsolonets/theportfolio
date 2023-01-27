@@ -11,6 +11,24 @@
   ],
   "projects": [
     {
+      "title": "My Word Is My Bond",
+      "img": "/assets/wordbond.png",
+      "githubLink": "#",
+      "demoLink": "https://www.mywordismybond.org/",
+      "text": "E-commerce high-quality client project for selling a book with getting current city from geolocation, books sold indicator, animations, admin panel, payment system with custom e-mail sending",
+      "tags": [
+        "React",
+        "Tailwind CSS",
+        "Prisma",
+        "React Query",
+        "Next.js",
+        "Trpc",
+        "MySQL",
+        "Stripe"
+      ],
+      "position": "left"
+    },
+    {
       "title": "Azon Shop",
       "img": "/assets/azon.png",
       "githubLink": "https://github.com/andrewsolonets/Azon-Shop",
