@@ -1,4 +1,5 @@
 import { useState } from "preact/hooks";
+import { resume } from "../content/projects.json";
 
 interface Props {
   setIsOpen: Function;
@@ -49,7 +50,7 @@ export const MobileMenu = ({ setIsOpen, isOpen }: Props) => {
         </li>
         <li>
           <a
-            href="https://drive.google.com/file/d/1Lnjq7vXpCMrYnDX3M1-ckaxR1PPwMNef/view?usp=sharing"
+            href={resume[0]}
             target="_blank"
             class="rounded-sm bg-transparent px-4 py-1 text-secondary outline outline-2 outline-secondary transition-all duration-300 hover:bg-secondary hover:bg-opacity-10"
           >
