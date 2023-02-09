@@ -1,5 +1,5 @@
 import { useState } from "preact/hooks";
-import { resume } from "../content/projects.json";
+import { resume } from "../data/data.json";
 
 interface Props {
   setIsOpen: Function;
