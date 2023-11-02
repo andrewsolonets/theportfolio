@@ -18,7 +18,7 @@
       "title": "My Word Is My Bond",
       "img": "/assets/wordbond.png",
       "githubLink": "#",
-      "demoLink": "https://www.mywordismybond.org/",
+      "demoLink": "https://theusualsuspects.netlify.app/",
       "text": "E-commerce high-quality client project for selling a book with getting current city from geolocation, books sold indicator, animations, admin panel, payment system with custom e-mail sending",
       "tags": [
         "React",
