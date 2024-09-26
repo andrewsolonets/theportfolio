@@ -1,6 +1,7 @@
 import { notifyViaTelegramBot } from "../helpers/helpers";
 
 export const ContactForm = () => {
+  // TODO: Success message/screen/toast notification
   const submitCallback = async (e: any) => {
     console.log(e.target);
     e.preventDefault();

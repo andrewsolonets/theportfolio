@@ -1,4 +1,6 @@
 ---
+import funPicture from "../assets/funpic.svg";
+import { Image } from "astro:assets";
 ---
 
 <section
@@ -21,11 +23,13 @@
     <div
       class="w-fit lg:min-h-[500px] md:min-w-[600px] md:min-h-[400px] lg:min-w-[700px] min-h-[300px] 2xl:w-[1000px]"
     >
-      <img
-        src="/assets/funPic.svg"
-        alt="mainPicture"
-        id="mainPic"
+      <Image
+        src={funPicture}
+        alt="funPicture"
         class="md:w-[600px] lg:w-[700px] 2xl:w-[1000px]"
+        id="funPic"
+        decoding="async"
+        loading="lazy"
         data-tilt
         data-tilt-reverse="true"
         data-tilt-max="12"
@@ -39,7 +43,7 @@
   import Typewriter from "typewriter-effect/dist/core";
   import VanillaTilt from "vanilla-tilt";
 
-  const selectedImg = document.getElementById("#mainPic");
+  const selectedImg = document.getElementById("#funPic");
   VanillaTilt.init(selectedImg as HTMLImageElement);
 
   const typewriter = new Typewriter("#typewriter", {
