@@ -16,9 +16,9 @@ export const MobileMenu = ({ setIsOpen, isOpen }: Props) => {
   };
   return (
     <div
-      class={`opacity-1 absolute inset-y-0 right-0 transform overflow-hidden md:hidden ${
+      class={`opacity-1 absolute inset-y-0 inset-x-0 right-0 transform overflow-hidden md:hidden ${
         isOpen ? "" : "translate-x-full opacity-0"
-      } animate z-10 min-h-screen w-[60vw] bg-primary-glass/70 duration-500 ease-out`}
+      } animate z-10 min-h-screen w-full bg-primary-glass/90 duration-500 ease-out`}
     >
       <ul class="text-bold  bottom-0 flex h-full w-full flex-col items-center justify-center gap-16 px-4 py-4  font-heading">
         <li

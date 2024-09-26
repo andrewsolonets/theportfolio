@@ -29,7 +29,7 @@ module.exports = {
         avatar: "0px 0px 31px 9px rgba(0, 0, 0, 0.25)",
       },
       backgroundImage: {
-        bgPattern: "url('/public/assets/bgPattern.png')",
+        bgPattern: "url('/assets/bgPattern.png')",
       },
       keyframes: {
         wave: {
