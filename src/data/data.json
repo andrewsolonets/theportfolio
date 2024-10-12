@@ -4,29 +4,30 @@
   ],
 
   "recentTech": [
-    "JavaScript (ES6)",
     "Node.js",
     "React",
     "Tailwind",
     "Astro",
     "Typescript",
-    "Prisma",
-    "Next.js"
+    "Prisma ORM",
+    "Next.js",
+    "PostgreSQL",
+    "Drizzle ORM"
   ],
   "projects": [
     {
       "title": "My Word Is My Bond",
       "img": "/assets/wordbond.png",
       "githubLink": "#",
-      "demoLink": "https://www.mywordismybond.org/",
-      "text": "E-commerce high-quality client project for selling a book with getting current city from geolocation, books sold indicator, animations, admin panel, payment system with custom e-mail sending",
+      "demoLink": "https://theusualsuspects.netlify.app/",
+      "text": "Book-selling client project full of complex custom animations. Includes: getting current city from geolocation, books sold indicator for each city, admin panel, payment system with custom e-mail receipts",
       "tags": [
         "React",
         "Tailwind CSS",
         "Prisma",
         "React Query",
         "Next.js",
-        "Trpc",
+        "tRPC",
         "MySQL",
         "Stripe"
       ],
@@ -37,14 +38,14 @@
       "img": "/assets/azon.png",
       "githubLink": "https://github.com/andrewsolonets/Azon-Shop",
       "demoLink": "https://azon-shop.vercel.app/",
-      "text": "E-Commerce website with typescript, optimistic updates, authentication, persistent cart, categories, infinite scroll and order tracking.",
+      "text": "E-Commerce website with typescript, optimistic updates, authentication, persistent cart, categories, infinite scroll and order tracking, product discounts and price history",
       "tags": [
-        "React",
+        "Next.js",
         "Tailwind CSS",
-        "Prisma",
+        "Drizzle ORM",
         "React Query",
-        "Trpc",
-        "MySQL",
+        "tRPC",
+        "PostgreSQL",
         "Stripe"
       ],
       "position": "right"

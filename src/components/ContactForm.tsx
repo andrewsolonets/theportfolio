@@ -2,6 +2,7 @@ import { useState } from "react"; // React-style hooks for state management in A
 import { notifyViaTelegramBot } from "../helpers/helpers";
 import Modal from "./Modal";
 
+// TODO: Add error handling, form data validation,submit button states - maybe use shadcn
 export const ContactForm = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
 
@@ -78,6 +79,7 @@ export const ContactForm = () => {
             Message
           </label>
         </div>
+
 
         <button
           class="rounded-xl bg-secondary px-4 py-2 text-xl font-medium text-primary"

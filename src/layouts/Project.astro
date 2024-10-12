@@ -1,5 +1,4 @@
 ---
-import "../styles/globals.css";
 import "@fontsource/quantico";
 import "@fontsource/inter";
 import "@fontsource/fjalla-one";
@@ -15,7 +14,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="scroll-pt-6 min-h-screen">
+<html lang="en" class="scroll-pt-6">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -29,13 +28,13 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-bgPattern min-h-screen">
+  <body class="bg-bgPattern text-neutral-50">
     <div class="overflow-x-hidden">
       <Nav client:load />
     </div>
     <SideSocials />
     <main
-      class="overflow-hidden flex flex-col items-center py-28"
+      class=" overflow-hidden   "
     >
       <slot />
     </main>

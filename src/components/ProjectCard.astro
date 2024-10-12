@@ -1,17 +1,18 @@
 ---
 import ExternalLinkIcon from "../../public/assets/ExternalLink";
 import GithubIcon from "../../public/assets/GithubIcon";
+import type { CollectionEntry } from 'astro:content';
 
-export interface Props {
-  title: string;
-  text: string;
-  tags: string[];
-  img: string;
-  position: string;
-  demoLink: string;
-  githubLink: string;
+interface Props {
+  project: CollectionEntry<'projects'>;
+  position: "left" |"right"
 }
-const { title, text, tags, img, position, demoLink, githubLink } = Astro.props;
+
+
+const {position,project} = Astro.props;
+const {title,description, image, githubUrl, liveUrl,techStack} = project.data;
+
+const pageLink = `/projects/${project.slug}`;
 ---
 
 <div
@@ -19,18 +20,18 @@ const { title, text, tags, img, position, demoLink, githubLink } = Astro.props;
   class="relative flex w-full items-center md:flex-row flex-col justify-between bg-cover px-4 py-4 md:bg-none md:px-0 md:py-0 md:gap-0 gap-10"
 >
   <a
-    href={demoLink}
-    target="_blank"
+    href={pageLink}
+    
     class={`${
       position === "left" ? "md:order-1" : "md:order-2 "
     }  md:w-[60%] md:min-w[520px] md:h-[350px]  hover:ring-4 ring-offset-4  ring-offset-primary  hover:ring-secondary rounded-lg  drop-shadow-2xl group overflow-hidden transition-all duration-500 w-full`}
   >
     <div
-      class="absolute z-10 h-full w-full bg-primary-dark object-cover opacity-30 bg-blend-overlay transition duration-500 group-hover:opacity-0"
+      class="absolute z-10 h-full w-full bg-primary-700 object-cover opacity-30 bg-blend-overlay transition duration-500 group-hover:opacity-0"
     >
     </div>
     <img
-      src={img}
+      src={image}
       alt="projectImage"
       class="z-10 h-full w-full scale-100 object-cover transition-all duration-700 group-hover:scale-110 flex"
     />
@@ -52,7 +53,7 @@ const { title, text, tags, img, position, demoLink, githubLink } = Astro.props;
     >
       <h4 class="font-sans font-semibold text-secondary">Featured Project</h4>
       <h2 class="text-4xl font-bold hover:text-secondary md:text-4xl">
-        <a href={demoLink} target="_blank">
+        <a href={pageLink}>
           {title}
         </a>
       </h2>
@@ -67,7 +68,7 @@ const { title, text, tags, img, position, demoLink, githubLink } = Astro.props;
             : "md:text-left text-center"
         }`}
       >
-        {text}
+        {description}
       </p>
     </div>
     <div
@@ -75,15 +76,15 @@ const { title, text, tags, img, position, demoLink, githubLink } = Astro.props;
         position === "left" ? "md:justify-end" : "md:justify-start"
       } justify-center md:w-[90%]`}
     >
-      {tags.map((tag) => <p>{tag}</p>)}
+      {techStack?.map((tag:string) => <p>{tag}</p>)}
     </div>
     <div class="flex gap-2">
-      <a href={githubLink} class="group" target="_blank">
+      <a href={liveUrl} class="group" target="_blank">
         <GithubIcon
           class="stroke-2 stroke-white w-7 h-7 group-hover:stroke-secondary hover:stroke-secondary"
         />
       </a>
-      <a href={demoLink} class="group" target="_blank"
+      <a href={githubUrl} class="group" target="_blank"
         ><ExternalLinkIcon
           class="stroke-2 w-7 group-hover:stroke-seconda hover:stroke-secondary"
         />
