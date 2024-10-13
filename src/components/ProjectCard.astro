@@ -1,16 +1,16 @@
 ---
 import ExternalLinkIcon from "../../public/assets/ExternalLink";
 import GithubIcon from "../../public/assets/GithubIcon";
-import type { CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from "astro:content";
 
 interface Props {
-  project: CollectionEntry<'projects'>;
-  position: "left" |"right"
+  project: CollectionEntry<"projects">;
+  position: "left" | "right";
 }
 
-
-const {position,project} = Astro.props;
-const {title,description, image, githubUrl, liveUrl,techStack} = project.data;
+const { position, project } = Astro.props;
+const { title, description, image, githubUrl, liveUrl, techStack } =
+  project.data;
 
 const pageLink = `/projects/${project.slug}`;
 ---
@@ -21,7 +21,6 @@ const pageLink = `/projects/${project.slug}`;
 >
   <a
     href={pageLink}
-    
     class={`${
       position === "left" ? "md:order-1" : "md:order-2 "
     }  md:w-[60%] md:min-w[520px] md:h-[350px]  hover:ring-4 ring-offset-4  ring-offset-primary  hover:ring-secondary rounded-lg  drop-shadow-2xl group overflow-hidden transition-all duration-500 w-full`}
@@ -76,15 +75,15 @@ const pageLink = `/projects/${project.slug}`;
         position === "left" ? "md:justify-end" : "md:justify-start"
       } justify-center md:w-[90%]`}
     >
-      {techStack?.map((tag:string) => <p>{tag}</p>)}
+      {techStack?.map((tag: string) => <p>{tag}</p>)}
     </div>
     <div class="flex gap-2">
-      <a href={liveUrl} class="group" target="_blank">
+      <a href={githubUrl} class="group" target="_blank">
         <GithubIcon
           class="stroke-2 stroke-white w-7 h-7 group-hover:stroke-secondary hover:stroke-secondary"
         />
       </a>
-      <a href={githubUrl} class="group" target="_blank"
+      <a href={liveUrl} class="group" target="_blank"
         ><ExternalLinkIcon
           class="stroke-2 w-7 group-hover:stroke-seconda hover:stroke-secondary"
         />

@@ -146,42 +146,42 @@ declare module 'astro:content' {
   slug: "azonshop";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "banquee.md": {
 	id: "banquee.md";
   slug: "banquee";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "chatapp.md": {
 	id: "chatapp.md";
   slug: "chatapp";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "listinggenie.md": {
 	id: "listinggenie.md";
   slug: "listinggenie";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "petspaw.md": {
 	id: "petspaw.md";
   slug: "petspaw";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "wordbond.md": {
 	id: "wordbond.md";
   slug: "wordbond";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 };
 
@@ -193,5 +193,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = never;
+	export type ContentConfig = typeof import("./../../src/content/config.js");
 }

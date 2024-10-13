@@ -16,7 +16,7 @@ export const DesktopNav = () => {
             active === "projectsLink" && "text-secondary"
           }`}
         >
-          <a id="projectsLink" onClick={setLink} href="#projects">
+          <a id="projectsLink" onClick={setLink} href="/#projects">
             Projects
           </a>
         </li>
@@ -25,7 +25,7 @@ export const DesktopNav = () => {
             active === "aboutLink" && "text-secondary"
           }`}
         >
-          <a id="aboutLink" onClick={setLink} href="#about">
+          <a id="aboutLink" onClick={setLink} href="/#about">
             About
           </a>
         </li>
@@ -34,7 +34,7 @@ export const DesktopNav = () => {
             active === "contactLink" && "text-secondary"
           }`}
         >
-          <a id="contactLink" onClick={setLink} href="#contact">
+          <a id="contactLink" onClick={setLink} href="/#contact">
             Contact
           </a>
         </li>

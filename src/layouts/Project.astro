@@ -28,14 +28,12 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-bgPattern text-neutral-50">
+  <body class="bg-bgPattern text-violet-50">
     <div class="overflow-x-hidden">
       <Nav client:load />
     </div>
     <SideSocials />
-    <main
-      class=" overflow-hidden   "
-    >
+    <main class="overflow-hidden">
       <slot />
     </main>
     <Footer />

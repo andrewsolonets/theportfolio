@@ -16,7 +16,7 @@ export const MobileMenu = ({ setIsOpen, isOpen }: Props) => {
   };
   return (
     <div
-      class={`opacity-1 absolute inset-y-0 inset-x-0 right-0 transform overflow-hidden md:hidden ${
+      class={`opacity-1 absolute inset-x-0 inset-y-0 right-0 transform overflow-hidden md:hidden ${
         isOpen ? "" : "translate-x-full opacity-0"
       } animate z-10 min-h-screen w-full bg-primary-glass/90 duration-500 ease-out`}
     >
@@ -26,7 +26,7 @@ export const MobileMenu = ({ setIsOpen, isOpen }: Props) => {
             active === "projectsLink" && "text-secondary"
           }`}
         >
-          <a id="projectsLink" onClick={setLink} href="#projects">
+          <a id="projectsLink" onClick={setLink} href="/#projects">
             Projects
           </a>
         </li>
@@ -35,7 +35,7 @@ export const MobileMenu = ({ setIsOpen, isOpen }: Props) => {
             active === "aboutLink" && "text-secondary"
           }`}
         >
-          <a id="aboutLink" onClick={setLink} href="#about">
+          <a id="aboutLink" onClick={setLink} href="/#about">
             About
           </a>
         </li>
@@ -44,7 +44,7 @@ export const MobileMenu = ({ setIsOpen, isOpen }: Props) => {
             active === "contactLink" && "text-secondary"
           }`}
         >
-          <a id="contactLink" onClick={setLink} href="#contact">
+          <a id="contactLink" onClick={setLink} href="/#contact">
             Contact
           </a>
         </li>

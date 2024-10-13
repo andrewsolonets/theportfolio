@@ -3,10 +3,11 @@ import console from "console";
 import ProjectCard from "./ProjectCard.astro";
 import { getCollection } from "astro:content";
 
-const posts = Object.values(import.meta.glob('../content/projects/*.md', { eager: true }));
-const allProjects = await getCollection('projects');
+const posts = Object.values(
+  import.meta.glob("../content/projects/*.md", { eager: true })
+);
+const allProjects = await getCollection("projects");
 const sortedProjects = allProjects.sort((a, b) => a.data.index - b.data.index);
-
 ---
 
 <section
@@ -20,17 +21,15 @@ const sortedProjects = allProjects.sort((a, b) => a.data.index - b.data.index);
     class="flex flex-col items-center justify-center gap-24 md:gap-64 md:text-lg"
   >
     {
-      sortedProjects?.filter(el => el?.data?.image)?.map((el,i) => {
-      
-        return (
-          <div data-aos={`fade-up`}>
-            <ProjectCard
-             project={el}
-             position={i%2 ?"right" :"left"}
-            />
-          </div>
-        );
-      })
+      sortedProjects
+        ?.filter((el) => el?.data?.image)
+        ?.map((el, i) => {
+          return (
+            <div data-aos={`fade-up`}>
+              <ProjectCard project={el} position={i % 2 ? "right" : "left"} />
+            </div>
+          );
+        })
     }
   </div>
 </section>
