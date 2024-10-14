@@ -20,19 +20,19 @@ index: 2
 
 # Azon Shop
 
-Azon Shop is an **e-commerce platform** with a persistent cart, infinite scrolling, and an order tracking system.
+Azon Shop is a demo **e-commerce platform** with a persistent cart, infinite scrolling, and an order tracking system.
 
 ![Homepage](/assets/azon.png)
 
 ## Key Features
 
-- User Authentication
 - Persistent Shopping Cart
-- Infinite Scrolling
+- Stripe webhooks
+- Product discounts and price history
 
 ## Tech Stack
 
-- **Frontend:** Next.js, Tailwind CSS
+- **Frontend:** Next.js (app router), Tailwind CSS
 - **Backend:** PostgreSQL, Drizzle ORM
 - **Database:** PostgreSQL
 - **Payment:** Stripe

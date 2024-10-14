@@ -40,6 +40,4 @@ This project is a **book-selling platform** built using **React** on the fronten
 
 ---
 
-[View the project on GitHub](#)
-
 [Check out the live site](https://theusualsuspects.netlify.app/)
