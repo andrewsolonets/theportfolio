@@ -1,6 +1,6 @@
 ---
 title: "Azon Shop"
-description: "E-Commerce website with TypeScript, optimistic updates, authentication, persistent cart, categories, infinite scroll, order tracking, product discounts, and price history."
+description: "E-Commerce website with typeScript, optimistic updates, authentication, persistent cart, categories, infinite scroll, order tracking, product discounts, and price history."
 date: "2024-01-15"
 techStack:
   [
