@@ -1,33 +1,26 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Prose from "../../components/Prose.astro";
-import { projects } from "../../data/data.json";
-import { navigate } from 'astro:transitions/client';
+import { navigate } from "astro:transitions/client";
 
-import { getEntry } from 'astro:content';
+import { getEntry } from "astro:content";
 
 const { id } = Astro.params;
-const entry= await getEntry("projects",id ??"");
+const entry = await getEntry("projects", id ?? "");
 if (!entry) {
   // TODO: Handle the case where the entry is not found (e.g., show a 404 page or a custom error message)
-
 }
 //@ts-ignore
 const { Content } = await entry.render();
-
 ---
 
 <Layout title={entry?.data?.title ?? "Not found"}>
-  <div class="md:px-10 lg:px-20  2xl:px-48">
-
-    <div class="rounded-md  md:p-12 p-6 bg-primary-700">
-      
-      
+  <div class="md:px-10 lg:px-20 2xl:px-48">
+    <div class="rounded-md md:p-12 p-6 bg-primary-700">
       <Prose>
-        
         <!-- <p>{greatPost.compiledContent()}</p> -->
         <Content />
-      </Prose >
+      </Prose>
     </div>
   </div>
 </Layout>
