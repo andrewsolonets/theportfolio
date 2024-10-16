@@ -1,7 +1,6 @@
 ---
-import funPic from "../../public/assets/funPic.svg";
-import arrow from "../../public/assets/arrow.png";
-import arrowMobile from "../../public/assets/arrowMobile.png";
+import funPicture from "../assets/funPic.svg";
+import { Image } from "astro:assets";
 ---
 
 <section
@@ -16,19 +15,21 @@ import arrowMobile from "../../public/assets/arrowMobile.png";
     <div
       class="absolute hidden animate-waving-arrow md:-left-28 md:top-52 lg:top-64 md:flex 2xl:top-96"
     >
-      <img src={arrow} class="w-32" alt="arrow" />
+      <img src="/assets/arrow.png" class="w-32" alt="arrow" />
     </div>
     <div class="absolute -top-16 left-8 flex animate-waving-arrow md:hidden">
-      <img src={arrowMobile} alt="mobileArrow" />
+      <img src="/assets/arrowMobile.png" alt="mobileArrow" />
     </div>
     <div
       class="w-fit lg:min-h-[500px] md:min-w-[600px] md:min-h-[400px] lg:min-w-[700px] min-h-[300px] 2xl:w-[1000px]"
     >
-      <img
-        src={funPic}
-        alt="mainPicture"
-        id="mainPic"
+      <Image
+        src={funPicture}
+        alt="funPicture"
         class="md:w-[600px] lg:w-[700px] 2xl:w-[1000px]"
+        id="funPic"
+        decoding="async"
+        loading="lazy"
         data-tilt
         data-tilt-reverse="true"
         data-tilt-max="12"
@@ -42,7 +43,7 @@ import arrowMobile from "../../public/assets/arrowMobile.png";
   import Typewriter from "typewriter-effect/dist/core";
   import VanillaTilt from "vanilla-tilt";
 
-  const selectedImg = document.getElementById("#mainPic");
+  const selectedImg = document.getElementById("#funPic");
   VanillaTilt.init(selectedImg as HTMLImageElement);
 
   const typewriter = new Typewriter("#typewriter", {

@@ -5,13 +5,24 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            
+            color: theme('colors.violet.50'),
+            '--tw-prose-invert-bullets':theme('colors.violet.50'),
+            // ...
+          },
+        },
+      }),
       colors: {
         transparent: "transparent",
         current: "currentColor",
         white: "#FFFFFF",
         primary: {
           DEFAULT: "#9046CF",
-          dark: "#893CCD",
+          "700": "#893CCD",
+          "800":"#722EB3",
           glass: "rgb(127 50 195 / <alpha-value>)",
         },
         secondary: {
@@ -29,7 +40,7 @@ module.exports = {
         avatar: "0px 0px 31px 9px rgba(0, 0, 0, 0.25)",
       },
       backgroundImage: {
-        bgPattern: "url('/public/assets/bgPattern.png')",
+        bgPattern: "url('/assets/bgPattern.png')",
       },
       keyframes: {
         wave: {
@@ -48,5 +59,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
 };

@@ -1,6 +1,30 @@
 ---
-import picture from "../../public/assets/me.jpg";
 import { recentTech } from "../data/data.json";
+import { Image } from "astro:assets";
+import myImage from "../assets/me.jpg";
+
+function getAge(birthDate: string) {
+  const currentDate = new Date();
+  const birth = new Date(birthDate);
+
+  let age = currentDate.getFullYear() - birth.getFullYear();
+
+  // Check if the current date is before the birthday this year
+  const isBeforeBirthday =
+    currentDate.getMonth() < birth.getMonth() ||
+    (currentDate.getMonth() === birth.getMonth() &&
+      currentDate.getDate() < birth.getDate());
+
+  // If before the birthday, subtract one year
+  if (isBeforeBirthday) {
+    age--;
+  }
+
+  return age;
+}
+
+const birthDate = "2004-07-18"; // YYYY-MM-DD format
+const myAge = getAge(birthDate);
 ---
 
 <section
@@ -13,11 +37,18 @@ import { recentTech } from "../data/data.json";
   >
     <div class="order-2 flex w-full flex-col gap-8 md:order-1 md:w-1/2">
       <p class="font-medium md:text-lg" data-aos="fade-up">
-        I’m 18 y.o. Ukrainian, currently in London, UK. Fast learner, passionate
-        about making smooth, well-architectured web apps, and I have experience
-        building full-stack applications (React + Node.js). To discover more -
-        see my projects. Outside web dev, I enjoy weightlifting and hiking or
-        biking in nature.
+        Full-Stack Developer with over 2 years of professional experience,
+        specializing in building scalable, efficient web applications. I have a
+        strong technical foundation in React, Next.js, Prisma, tRPC, and
+        PostgreSQL, with hands-on expertise in creating dynamic platforms
+        featuring seamless API integrations like Shopify and Stripe. I take
+        pride in delivering solutions that are not only functional but also
+        well-documented, ensuring smooth collaboration for both development
+        teams and end users. My experience spans crafting responsive UIs,
+        automating workflows, and optimizing backend logic, all while focusing
+        on delivering high-quality, maintainable code. To discover more - see my
+        projects. I’m {myAge} y.o. ukrainian, currently in London, UK. Outside web
+        dev, I enjoy weightlifting, hiking, cycling and photography.
       </p>
       <div class="flex flex-col gap-6" data-aos="fade-up">
         <p class="font-medium md:text-lg">
@@ -34,17 +65,21 @@ import { recentTech } from "../data/data.json";
         </ul>
       </div>
     </div>
-
-    <img
-      alt="avatar"
-      src={picture}
+    <Image
+      src={myImage}
       data-aos="fade-up"
       class="order-1 h-52 w-52 rounded-full border-[14px] border-secondary object-cover drop-shadow-2xl hover:drop-shadow-xl md:order-2"
+      alt="avatar"
     />
   </div>
+  <script>
+    import "aos/dist/aos.css";
+    import AOS from "aos";
+    AOS.init({
+      duration: 1000,
+      offset: 0,
+      easing: "ease-out-sine",
+      once: false,
+    });
+  </script>
 </section>
-<script>
-  import "aos/dist/aos.css";
-  import AOS from "aos";
-  AOS.init({ duration: 1000, offset: 0, easing: "ease-out-sine", once: false });
-</script>

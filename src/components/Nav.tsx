@@ -32,7 +32,9 @@ export const Nav = () => {
         visible ? "top-0" : "-translate-y-48"
       } px-10 `}
     >
-      <h3>Andrii S.</h3>
+      <a href="/">
+        <h3>Andrii S.</h3>
+      </a>
       <DesktopNav />
       <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
       <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />

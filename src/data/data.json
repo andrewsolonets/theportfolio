@@ -1,87 +1,18 @@
 {
   "resume": [
-    "https://docs.google.com/document/d/1bi7je383wBFZEZgycGdDHo5_yq6SUpKokRS_IcC2SzM/edit?usp=sharing"
+    "https://drive.google.com/file/d/1dGZ6X7SFCSmzl9GSZWCJAOFcpOEKhOfb/view?usp=sharing"
   ],
 
   "recentTech": [
-    "JavaScript (ES6)",
-    "Node.js",
+     "Node.js",
     "React",
     "Tailwind",
     "Astro",
     "Typescript",
-    "Prisma",
-    "Next.js"
-  ],
-  "projects": [
-    {
-      "title": "My Word Is My Bond",
-      "img": "/assets/wordbond.png",
-      "githubLink": "#",
-      "demoLink": "https://theusualsuspects.netlify.app/",
-      "text": "E-commerce high-quality client project for selling a book with getting current city from geolocation, books sold indicator, animations, admin panel, payment system with custom e-mail sending",
-      "tags": [
-        "React",
-        "Tailwind CSS",
-        "Prisma",
-        "React Query",
-        "Next.js",
-        "Trpc",
-        "MySQL",
-        "Stripe"
-      ],
-      "position": "left"
-    },
-    {
-      "title": "Azon Shop",
-      "img": "/assets/azon.png",
-      "githubLink": "https://github.com/andrewsolonets/Azon-Shop",
-      "demoLink": "https://azon-shop.vercel.app/",
-      "text": "E-Commerce website with typescript, optimistic updates, authentication, persistent cart, categories, infinite scroll and order tracking.",
-      "tags": [
-        "React",
-        "Tailwind CSS",
-        "Prisma",
-        "React Query",
-        "Trpc",
-        "MySQL",
-        "Stripe"
-      ],
-      "position": "right"
-    },
-    {
-      "title": "PetsPaw",
-      "img": "/assets/petspaws.png",
-      "githubLink": "https://github.com/andrewsolonets/PetsPaw",
-      "demoLink": "https://petspaws.netlify.app/",
-      "text": "Social media app for cat lovers.  Voting, gallery, dark theme, info pages about each cat breed with pictures, ploading your cats, user actions history and search. Built with custom hooks and reusable components.",
-      "tags": ["React", "Styled-components"],
-      "position": "left"
-    },
-    {
-      "title": "Banquee",
-      "img": "/assets/banquee.png",
-      "githubLink": "https://github.com/andrewsolonets/Banquee-App",
-      "demoLink": "https://banquee-app.vercel.app/",
-      "text": "Multi-page landing for a bank with complex animations, CTA, blog, FAQ page, parallax effect. See more on github. ",
-      "tags": ["Next.js", "Tailwind CSS", "Framer Motion"],
-      "position": "right"
-    },
-    {
-      "title": "The Chat App",
-      "img": "/assets/thechatapp.png",
-      "githubLink": "https://github.com/andrewsolonets/TheChatApp",
-      "demoLink": "https://thechatapp.vercel.app/",
-      "text": "Full-stack, real time messaging app with authentication, cookies, jwt, chats history persistence, avatar selection",
-      "tags": [
-        "Next.js",
-        "Tailwind CSS",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Socket.io"
-      ],
-      "position": "left"
-    }
+    "Prisma ORM",
+    "Next.js",
+    "PostgreSQL",
+    "Drizzle ORM"
+  ]
   ]
 }

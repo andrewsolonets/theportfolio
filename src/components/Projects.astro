@@ -1,6 +1,13 @@
 ---
+import console from "console";
 import ProjectCard from "./ProjectCard.astro";
-import { projects } from "../data/data.json";
+import { getCollection } from "astro:content";
+
+const posts = Object.values(
+  import.meta.glob("../content/projects/*.md", { eager: true })
+);
+const allProjects = await getCollection("projects");
+const sortedProjects = allProjects.sort((a, b) => a.data.index - b.data.index);
 ---
 
 <section
@@ -14,21 +21,15 @@ import { projects } from "../data/data.json";
     class="flex flex-col items-center justify-center gap-24 md:gap-64 md:text-lg"
   >
     {
-      projects.map((el) => {
-        return (
-          <div data-aos={`fade-up`}>
-            <ProjectCard
-              title={el.title}
-              img={el.img}
-              text={el.text}
-              tags={el.tags}
-              position={el.position}
-              githubLink={el.githubLink}
-              demoLink={el.demoLink}
-            />
-          </div>
-        );
-      })
+      sortedProjects
+        ?.filter((el) => el?.data?.image)
+        ?.map((el, i) => {
+          return (
+            <div data-aos={`fade-up`}>
+              <ProjectCard project={el} position={i % 2 ? "right" : "left"} />
+            </div>
+          );
+        })
     }
   </div>
 </section>
