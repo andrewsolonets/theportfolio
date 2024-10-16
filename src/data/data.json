@@ -4,7 +4,7 @@
   ],
 
   "recentTech": [
-    "Node.js",
+     "Node.js",
     "React",
     "Tailwind",
     "Astro",
@@ -13,5 +13,6 @@
     "Next.js",
     "PostgreSQL",
     "Drizzle ORM"
+  ]
   ]
 }
