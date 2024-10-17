@@ -12,4 +12,7 @@ export default defineConfig({
   integrations: [preact({ compat: true }), tailwind()],
   output: "server",
   adapter: netlify(),
+  buildOptions: {
+    page404: '/404',
+  },
 });
