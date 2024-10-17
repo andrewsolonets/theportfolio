@@ -1,8 +1,3 @@
----
-import funPicture from "../assets/funPic.svg";
-import { Image } from "astro:assets";
----
-
 <section
   class="flex w-full flex-col items-center gap-24 md:items-start md:gap-0"
 >
@@ -23,8 +18,8 @@ import { Image } from "astro:assets";
     <div
       class="w-fit lg:min-h-[500px] md:min-w-[600px] md:min-h-[400px] lg:min-w-[700px] min-h-[300px] 2xl:w-[1000px]"
     >
-      <Image
-        src={funPicture}
+      <img
+        src={"../assets/funPic.svg"}
         alt="funPicture"
         class="md:w-[600px] lg:w-[700px] 2xl:w-[1000px]"
         id="funPic"
